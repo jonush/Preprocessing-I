@@ -158,11 +158,34 @@ header {
   justify-content: center;
   align-items: center;
 }
-header .title0 {
+header nav {
   width: 25%;
-  text-align: right;
-  padding: 3%;
+  padding: 3% 3% 12%;
   color: #FFFFFF;
+  display: flex;
+  align-items: flex-start;
+}
+header nav a {
+  margin-left: 3%;
+  margin-right: 3%;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+@media (max-width: 500px) {
+  header nav a {
+    margin: 10% 0;
+    font-size: 1.6rem;
+  }
+}
+header nav a:hover {
+  color: #000000;
+}
+@media (max-width: 500px) {
+  header nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
 }
 header .content0 {
   display: flex;
@@ -183,6 +206,23 @@ header .content0 h2 {
   color: #1a5a85;
   font-weight: bold;
 }
+header .content0 p {
+  padding: 1%;
+  line-height: 25px;
+  width: 70%;
+}
+header .content0 p a {
+  text-decoration: none;
+  color: #1a5a85;
+}
+header .content0 p a:hover {
+  color: red;
+}
+@media (max-width: 500px) {
+  header .content0 p {
+    width: 100%;
+  }
+}
 /* -------EDUCATION STYLES------- */
 .education {
   display: flex;
@@ -201,6 +241,14 @@ header .content0 h2 {
 }
 .education .title1 h4 {
   padding: 1%;
+}
+@media (max-width: 500px) {
+  .education .title1 {
+    width: 50%;
+    text-align: right;
+    padding-right: 3%;
+    padding-top: 10%;
+  }
 }
 .education .content1 {
   display: flex;
@@ -226,6 +274,12 @@ header .content0 h2 {
   padding-left: 1%;
   padding-right: 1%;
 }
+@media (max-width: 500px) {
+  .education .content1 {
+    margin-right: 20%;
+    width: 60%;
+  }
+}
 /* -------EXPERIENCE STYLES------- */
 .experience {
   display: flex;
@@ -242,8 +296,31 @@ header .content0 h2 {
   padding: 20% 1% 2%;
   font-size: 1.3rem;
 }
+@media (max-width: 500px) {
+  .experience .title2 h3 {
+    margin-top: 28%;
+  }
+}
 .experience .title2 h4 {
   padding: 2% 1% 25%;
+}
+@media (max-width: 500px) {
+  .experience .title2 h4 {
+    margin-bottom: 75%;
+  }
+}
+.experience .title2 a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.experience .title2 a:hover {
+  color: #000000;
+}
+@media (max-width: 500px) {
+  .experience .title2 {
+    width: 38%;
+    padding-right: 4.5%;
+  }
 }
 .experience .content2 {
   display: flex;
@@ -268,6 +345,11 @@ header .content0 h2 {
   list-style-type: none;
   list-style-position: inside;
 }
+@media (max-width: 500px) {
+  .experience .content2 ul li {
+    padding-top: 2%;
+  }
+}
 .experience .content2 ul li::before {
   content: "• ";
   color: black;
@@ -276,8 +358,24 @@ header .content0 h2 {
 .experience .content2 .pack {
   padding-bottom: 3%;
 }
+@media (max-width: 500px) {
+  .experience .content2 .pack {
+    padding-top: 4%;
+  }
+}
 .experience .content2 .club {
   padding-bottom: 3%;
+}
+@media (max-width: 500px) {
+  .experience .content2 .club {
+    padding-top: 8%;
+  }
+}
+@media (max-width: 500px) {
+  .experience .content2 {
+    width: 60%;
+    padding-left: 1%;
+  }
 }
 /* -------SKILLS AND CONTACT STYLES------- */
 .other {
@@ -286,10 +384,24 @@ header .content0 h2 {
   align-items: center;
 }
 .other .title3 {
-  display: hidden;
+  visibility: hidden;
   text-align: right;
   padding: 3%;
   width: 25%;
+}
+@media (max-width: 500px) {
+  .other .title3 {
+    visibility: visible;
+    width: 40%;
+    padding-right: 10%;
+  }
+  .other .title3 a {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+  .other .title3 a:hover {
+    color: #000000;
+  }
 }
 .other .content3 {
   display: flex;
@@ -300,6 +412,11 @@ header .content0 h2 {
   font-size: 2rem;
   color: #1a5a85;
   font-weight: bold;
+}
+@media (max-width: 500px) {
+  .other .content3 {
+    flex-direction: column;
+  }
 }
 .other #skills {
   flex-direction: column;
@@ -325,6 +442,12 @@ header .content0 h2 {
 .other #contact ul li {
   padding-top: 4%;
   padding-bottom: 2%;
+}
+@media (max-width: 500px) {
+  .other #contact {
+    margin-top: 5%;
+    margin-left: 0;
+  }
 }
 hr {
   width: 50%;
