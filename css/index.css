@@ -1,1 +1,332 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font-size: 62.7%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+}
+/* -------STYLES START HERE------- */
+/* -------MIXINS------- */
+.layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+/* -------VARIABLES------- */
+/* -------WALLPAPER DESIGN STYLE------- */
+body {
+  background: linear-gradient(to right, #1a5a85 37.5%, #ffffff 0%);
+}
+/* -------HEADER STYLES------- */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .title0 {
+  width: 25%;
+  text-align: right;
+  padding: 3%;
+  color: #FFFFFF;
+}
+header .content0 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding: 3%;
+}
+header .content0 h1 {
+  padding: 1%;
+  font-size: 3rem;
+}
+header .content0 h2 {
+  padding-bottom: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  font-size: 2rem;
+  color: #1a5a85;
+  font-weight: bold;
+}
+/* -------EDUCATION STYLES------- */
+.education {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.education .title1 {
+  width: 25%;
+  text-align: right;
+  padding: 3%;
+  color: #FFFFFF;
+}
+.education .title1 h3 {
+  padding: 23% 1% 1%;
+  font-size: 1.3rem;
+}
+.education .title1 h4 {
+  padding: 1%;
+}
+.education .content1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding: 3%;
+}
+.education .content1 h2 {
+  padding: 1%;
+  font-size: 2rem;
+  color: #1a5a85;
+  font-weight: bold;
+}
+.education .content1 h3 {
+  padding-top: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  font-size: 1.3rem;
+  color: #4e4e4e;
+}
+.education .content1 p {
+  padding-left: 1%;
+  padding-right: 1%;
+}
+/* -------EXPERIENCE STYLES------- */
+.experience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.experience .title2 {
+  width: 25%;
+  text-align: right;
+  padding: 3%;
+  color: #FFFFFF;
+}
+.experience .title2 h3 {
+  padding: 20% 1% 2%;
+  font-size: 1.3rem;
+}
+.experience .title2 h4 {
+  padding: 2% 1% 25%;
+}
+.experience .content2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding: 3%;
+}
+.experience .content2 h2 {
+  font-size: 2rem;
+  padding: 1%;
+  color: #1a5a85;
+  font-weight: bold;
+}
+.experience .content2 h3 {
+  padding: 1%;
+  font-size: 1.3rem;
+  color: #4e4e4e;
+}
+.experience .content2 ul li {
+  padding: 0.7% 1%;
+  list-style-type: none;
+  list-style-position: inside;
+}
+.experience .content2 ul li::before {
+  content: "• ";
+  color: black;
+  /* or whatever color you prefer */
+}
+.experience .content2 .pack {
+  padding-bottom: 3%;
+}
+.experience .content2 .club {
+  padding-bottom: 3%;
+}
+/* -------SKILLS AND CONTACT STYLES------- */
+.other {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.other .title3 {
+  display: hidden;
+  text-align: right;
+  padding: 3%;
+  width: 25%;
+}
+.other .content3 {
+  display: flex;
+  width: 50%;
+  padding: 3%;
+}
+.other .content3 h2 {
+  font-size: 2rem;
+  color: #1a5a85;
+  font-weight: bold;
+}
+.other #skills {
+  flex-direction: column;
+  padding: 1%;
+}
+.other #skills h3 {
+  padding: 1%;
+  font-size: 1.3rem;
+}
+.other #skills ul li {
+  padding-top: 5%;
+  padding-bottom: 4%;
+}
+.other #contact {
+  flex-direction: column;
+  margin-left: 10%;
+  padding: 1%;
+}
+.other #contact h3 {
+  padding: 1%;
+  font-size: 1.3rem;
+}
+.other #contact ul li {
+  padding-top: 4%;
+  padding-bottom: 2%;
+}
+hr {
+  width: 50%;
+  margin-left: 40%;
+}

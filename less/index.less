@@ -3,7 +3,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,8 +18,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
-	font-size: 100%;
+	font-size: 62.7%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -50,10 +48,229 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	// border: 1px solid grey;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+    font-family: 'Lato', sans-serif;
 }
 
+/* -------STYLES START HERE------- */
+
+/* -------MIXINS------- */
+.layout {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.content-layout {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+}
+
+/* -------VARIABLES------- */
+@wallpaper: linear-gradient(to right, #1a5a85 37.5%, #ffffff 0%);
+@title-color: #FFFFFF;
+@category-color: #1a5a85;
+
+/* -------WALLPAPER DESIGN STYLE------- */
+body {
+	background: @wallpaper;
+}
+
+/* -------HEADER STYLES------- */
+header {
+	.layout();
+
+	.title0 {
+		width: 25%;
+		text-align: right;
+		padding: 3%;
+		color: @title-color;
+	}
+
+	.content0 {
+		.content-layout;
+		padding: 3%;
+
+		h1 {
+			padding: 1%;
+			font-size: 3rem;
+		}
+		h2 {
+			padding-bottom: 1%;
+			padding-left: 1%;
+			padding-right: 1%;
+			font-size: 2rem;
+			color: @category-color;
+			font-weight: bold;
+		}
+	}
+}
+
+/* -------EDUCATION STYLES------- */
+.education {
+	.layout();
+
+	.title1 {
+		width: 25%;
+		text-align: right;
+		padding: 3%;
+		color: @title-color;
+
+		h3 {
+			padding: 23% 1% 1%;
+			font-size: 1.3rem;
+		}
+
+		h4 {
+			padding: 1%;
+		}
+	}
+
+	.content1 {
+		.content-layout;
+		padding: 3%;
+
+		h2 {
+			padding: 1%;
+			font-size: 2rem;
+			color: @category-color;
+			font-weight: bold;
+		}
+		h3 {
+			padding-top: 1%;
+			padding-left: 1%;
+			padding-right: 1%;
+			font-size: 1.3rem;
+			color: rgb(78, 78, 78);
+		}
+		p {
+			padding-left: 1%;
+			padding-right: 1%;
+		}
+	}
+}
+
+/* -------EXPERIENCE STYLES------- */
+.experience {
+	.layout();
+
+	.title2 {
+		width: 25%;
+		text-align: right;
+		padding: 3%;
+		color: @title-color;
+		
+		h3 {
+			padding: 20% 1% 2%;
+			font-size: 1.3rem;
+		}
+
+		h4 {
+			padding: 2% 1% 25%;
+		}
+	}
+
+	.content2 {
+		.content-layout;
+		padding: 3%;
+
+		h2 {
+			font-size: 2rem;
+			padding: 1%;
+			color: @category-color;
+			font-weight: bold;
+		}
+
+		h3 {
+			padding: 1%;
+			font-size: 1.3rem;
+			color: rgb(78, 78, 78);
+		}
+
+		ul li {
+			padding: .7% 1%;
+			list-style-type: none;
+			list-style-position: inside;
+		}
+
+		ul li::before {
+			content: "• ";
+			color: black; /* or whatever color you prefer */
+		}
+
+		.pack {
+			padding-bottom: 3%;
+		}
+
+		.club {
+			padding-bottom: 3%;
+		}
+	}
+}
+
+/* -------SKILLS AND CONTACT STYLES------- */
+.other {
+	.layout();
+
+	.title3 {
+		display: hidden;
+		text-align: right;
+		padding: 3%;
+		width: 25%;
+	}
+
+	.content3 {
+		display: flex;
+		width: 50%;
+		padding: 3%;
+
+		h2 {
+			font-size: 2rem;
+			color: @category-color;
+			font-weight: bold;
+		}
+	}
+
+	#skills {
+		flex-direction: column;
+		padding: 1%;
+		
+		h3 {
+			padding: 1%;
+			font-size: 1.3rem;
+		}
+
+		ul li {
+			padding-top: 5%;
+			padding-bottom: 4%;
+		}
+	}
+
+	#contact {
+		flex-direction: column;
+		margin-left: 10%;
+		padding: 1%;
+
+		h3 {
+			padding: 1%;
+			font-size: 1.3rem;
+		}
+
+		ul li {
+			padding-top: 4%;
+			padding-bottom: 2%;
+		}
+	}
+}
+
+hr {
+	width: 50%;
+	margin-left: 40%;
+}
